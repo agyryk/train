@@ -23,8 +23,9 @@ class Importer(object):
             doc_id = 0;
             with open("data.txt", "r") as lines:
                 for line in lines:
-                    self.bucket.upsert(str(doc_id),
-                                       json.loads((line)))
+                    doc = json.loads(line)
+                    doc["category"] = doc["category"].split("-")[0]
+                    self.bucket.upsert(str(doc_id), doc)
                     doc_id += 1
 
 ex = Importer()
