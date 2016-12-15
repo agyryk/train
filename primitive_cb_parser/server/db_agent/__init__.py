@@ -5,8 +5,7 @@ import time
 
 class DB_Agent(object):
 
-    def __init__(self, cbp_settings):
-        self.settings = cbp_settings
+    def __init__(self):
         self.msg_queue = None
 
     def run(self, msg_q):

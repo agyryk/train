@@ -2,19 +2,17 @@ from flask import Flask
 import time
 
 from rest_api import RestApiEngine
-from settings import ParserSettings
 from db_agent import DB_Agent
 
 
-settings = ParserSettings()
-dbagent = DB_Agent(settings)
-api = RestApiEngine(settings, dbagent)
+dbagent = DB_Agent()
+api = RestApiEngine(dbagent)
 api.start_dbagent()
 app = Flask(__name__)
 
 
 def start(debug):
-    app.run(debug=debug)
+    app.run(host='0.0.0.0', debug=debug)
 
 
 @app.route('/api/ping')

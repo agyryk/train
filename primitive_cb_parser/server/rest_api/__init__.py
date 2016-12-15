@@ -8,8 +8,7 @@ class RestApiEngine(object):
     msg_queue = Queue()
     protocol = CommuncationProtocol()
 
-    def __init__(self, cbp_settings, dbagent):
-        self.settings = cbp_settings
+    def __init__(self, dbagent):
         self.dbagent = dbagent
         self.dbagent_thread = Thread(target=dbagent.run, args=(self.msg_queue,))
         self.dbagent_thread.daemon = True
