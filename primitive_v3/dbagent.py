@@ -103,12 +103,12 @@ class ParsingRule():
         self.value = rule["value"]
 
 '''
-curl -i -H "Content-Type: application/json" -XPOST  http://localhost:5000/api/run -d '{"server": {"name":"172.23.100.190", "bucket":"train", "port":"8091", "password":"password"},"rules":[{"name": "city", "source":"city", "value":"*", "filter":"*"},{"name":"position", "source": "position", "value":"any java positions", "filter":"include(java)"},{"name":"position", "source": "position", "value":"any developer position", "filter":"include(developer)"},{"name":"position", "source": "position", "value":"only java developers", "filter":"include(java, developer)"},{"name":"position", "source": "position", "value":"all qa", "filter":"include(qa)"}, {"name":"salary", "source": "salary", "value":"below 150K", "filter":"range(<150)"},{"name":"salary", "source": "salary", "value":"above 150K", "filter":"range(>=150)"},{"name": "experience", "source":"experience", "value":"*", "filter":"*"}]}'
+curl -i -H "Content-Type: application/json" -XPOST  http://localhost:5000/api/run -d '{"server": {"name":"localhost", "bucket":"train", "port":"8091", "password":"password"},"rules":[{"name": "city", "source":"city", "value":"*", "filter":"*"},{"name":"position", "source": "position", "value":"any java positions", "filter":"include(java)"},{"name":"position", "source": "position", "value":"any developer position", "filter":"include(developer)"},{"name":"position", "source": "position", "value":"only java developers", "filter":"include(java, developer)"},{"name":"position", "source": "position", "value":"all qa", "filter":"include(qa)"}, {"name":"salary", "source": "salary", "value":"below 150K", "filter":"range(<150)"},{"name":"salary", "source": "salary", "value":"above 150K", "filter":"range(>=150)"},{"name": "experience", "source":"experience", "value":"*", "filter":"*"}]}'
 
 
 
 {
-"server": {"name":"172.23.100.190", "bucket":"train", "port":"8091", "password":"password"}},
+"server": {"name":"localhost", "bucket":"train", "port":"8091", "password":"password"}},
 "rules":[
             {"name": "city", "source":"city", "value":"*", "filter":"*"},
             {"name":"position", "source": "position", "value":"any java positions", "filter":"include(java)"},

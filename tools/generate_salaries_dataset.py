@@ -3,10 +3,10 @@ from couchbase.bucket import  Bucket
 import random
 
 
-SERVER = "172.23.100.190"
-PWD = "password"
-TOTAL_DOCS = 10000
-BUCKET_NAME = "train"
+SERVER = "<ip>"
+PWD = "<pwd>"
+TOTAL_DOCS = 1000
+BUCKET_NAME = "<bucketname>"
 
 cities = [
                 "Chicago","Chicago","Chicago",
