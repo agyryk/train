@@ -7,7 +7,9 @@
    
    APIs:
     http://localhost:5000/api/ping  - returns pong
+    
     http://localhost:5000/api/run - POST request to start indexing (need to post cb server settigns and tags rules
+    
     http://localhost:5000/api/progress - general status of the parser
 
 4) run indexer using post to api/run. Example of the data:
