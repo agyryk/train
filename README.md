@@ -6,6 +6,7 @@
 3) run the parser by running  primitive_v3/run.py
    
    APIs:
+   
     http://localhost:5000/api/ping  - returns pong
     
     http://localhost:5000/api/run - POST request to start indexing (need to post cb server settigns and tags rules
